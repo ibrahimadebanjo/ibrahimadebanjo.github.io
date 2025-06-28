@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ibrahim Adebanjo - Portfolio</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#4F46E5',secondary:'#818CF8'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+}
+.typing-effect::after {
+content: "|";
+animation: blink 1s infinite;
+}
+@keyframes blink {
+0%, 100% { opacity: 1; }
+50% { opacity: 0; }
+}
+.skill-bar {
+height: 8px;
+border-radius: 4px;
+background-color: #e5e7eb;
+overflow: hidden;
+}
+.skill-progress {
+height: 100%;
+border-radius: 4px;
+background-color: #4F46E5;
+}
+input:focus, textarea:focus {
+outline: none;
+border-color: #4F46E5;
+}
+</style>
+</head>
+<body class="bg-gray-50">
+<!-- Navigation -->
+<nav class="bg-white shadow-sm fixed w-full z-10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16">
+<div class="flex items-center">
+<span class="text-2xl font-['Pacifico'] text-primary">Ibrahim</span>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a href="#home" class="text-gray-700 hover:text-primary font-medium">Home</a>
+<a href="#about" class="text-gray-700 hover:text-primary font-medium">About</a>
+<a href="#experience" class="text-gray-700 hover:text-primary font-medium">Experience</a>
+<a href="#focus" class="text-gray-700 hover:text-primary font-medium">Focus Areas</a>
+<a href="#skills" class="text-gray-700 hover:text-primary font-medium">Skills</a>
+<a href="#vision" class="text-gray-700 hover:text-primary font-medium">Vision</a>
+<a href="#contact" class="text-gray-700 hover:text-primary font-medium">Contact</a>
+</div>
+<div class="md:hidden flex items-center">
+<button id="mobileMenuButton" class="w-10 h-10 flex items-center justify-center text-gray-700">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile menu -->
+<div id="mobileMenu" class="hidden md:hidden bg-white shadow-md">
+<div class="px-2 pt-2 pb-3 space-y-1">
+<a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary">Home</a>
+<a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary">About</a>
+<a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary">Experience</a>
+<a href="#focus" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary">Focus Areas</a>
+<a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary">Skills</a>
+<a href="#vision" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary">Vision</a>
+<a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary">Contact</a>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section id="home" class="relative pt-16">
+<div class="w-full h-[600px] bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=Professional%2520modern%2520tech%2520background%2520with%2520subtle%2520medical%2520and%2520technology%2520elements%2C%2520blue%2520gradient%2520on%2520right%2520side%2520with%2520clean%2520white%2520space%2520on%2520left%2520for%2520text%2C%2520abstract%2520digital%2520patterns%2520representing%2520veterinary%2520medicine%2520and%2520software%2520development%2C%2520professional%2520sleek%2520design&width=1920&height=1080&seq=hero1&orientation=landscape');">
+<div class="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent"></div>
+<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+<div class="w-full md:w-1/2 space-y-6">
+<h1 class="text-4xl md:text-5xl font-bold text-gray-900">Ibrahim Adebanjo</h1>
+<div class="h-12">
+<p id="typingText" class="typing-effect text-xl md:text-2xl text-primary font-medium"></p>
+</div>
+<p class="text-gray-600 text-lg max-w-lg">
+Building innovative solutions at the intersection of veterinary science, software development, and artificial intelligence.
+</p>
+<div class="flex space-x-4 pt-4">
+<a href="mailto:ibrahimadebanjo283@gmail.com" class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 transition duration-300 flex items-center whitespace-nowrap">
+<span class="w-5 h-5 flex items-center justify-center mr-2"><i class="ri-mail-line"></i></span>
+Contact Me
+</a>
+<a href="https://github.com/Ibrahimadebanjo" target="_blank" class="bg-white text-gray-800 border border-gray-300 px-6 py-3 rounded-button font-medium hover:bg-gray-50 transition duration-300 flex items-center whitespace-nowrap">
+<span class="w-5 h-5 flex items-center justify-center mr-2"><i class="ri-github-line"></i></span>
+GitHub
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Me Section -->
+<section id="about" class="py-20 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold text-center text-gray-900 mb-12">About Me</h2>
+<div class="flex flex-col md:flex-row gap-10">
+<div class="md:w-1/2">
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Professional Journey</h3>
+<p class="text-gray-600 mb-4">
+I'm a Veterinary Medicine student and a passionate software developer with over 3 years of experience in building responsive, user-centric web applications. Currently, I'm expanding my capabilities into Machine Learning Engineering, driven by a deep interest in using technology to solve real-world problems in animal health and diagnostics.
+</p>
+<p class="text-gray-600 mb-4">
+My current focus lies at the intersection of veterinary science, AI, and innovation — developing intelligent systems to improve disease prediction, diagnostics, and overall animal care. I'm building strong foundations in Python, data engineering, and core ML algorithms to support this mission.
+</p>
+<p class="text-gray-600">
+Beyond web development and machine learning, I have a growing interest in robotics and automation, with a long-term vision of transforming veterinary care through smart, scalable technologies.
+</p>
+</div>
+<div class="md:w-1/2 bg-gray-50 rounded-lg p-8 shadow-sm">
+<h3 class="text-xl font-semibold text-gray-900 mb-6">Key Expertise</h3>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700 font-medium">Frontend Development</span>
+<span class="text-primary font-medium">90%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-progress" style="width: 90%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700 font-medium">Machine Learning</span>
+<span class="text-primary font-medium">75%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-progress" style="width: 75%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700 font-medium">Veterinary Science</span>
+<span class="text-primary font-medium">85%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-progress" style="width: 85%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700 font-medium">Robotics & Automation</span>
+<span class="text-primary font-medium">65%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-progress" style="width: 65%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Section -->
+<section class="py-20 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold text-center text-gray-900 mb-4">Experience</h2>
+<p class="text-gray-600 text-center mb-12">My Professional Experience</p>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-6">
+<!-- Education Column 1 -->
+<div class="bg-gray-50 p-6 rounded-lg">
+<div class="text-sm text-primary mb-2">2012 - 2018</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Ilese Comprehensive High School</h3>
+<p class="text-gray-600">Completed high school diploma with strong foundation in sciences and Mathematics and Computer Science, laying the groundwork for my future pursuits in technology and veterinary Medicine.</p>
+</div>
+
+<div class="bg-gray-50 p-6 rounded-lg">
+<div class="text-sm text-primary mb-2">2023 - Present</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Ahmadu Bello University Of Zaria</h3>
+<p class="text-gray-600">Currently Pursuing a degree in Veterinary Medicine with a focus on leveraging technology to improve animal well-being.</p>
+</div>
+
+<div class="bg-gray-50 p-6 rounded-lg">
+<div class="text-sm text-primary mb-2">2022 - 2023</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Frontend Developer Internship</h3>
+<p class="text-gray-600">Participated in a 4-month Frontend Development Scholarship Program, mastering HTML, CSS, JavaScript, and React through weekly hands-on projects, assignments, and testing. The program consisted of three levels: Basic (HTML/CSS), Intermediate (JavaScript), and Advanced (React with NPM, Yarn, and Vite). Consistently demonstrated expertise, earning weekly Best Student of the Week certifications, and acquired skills in frontend development, problem-solving, and time management.</p>
+</div>
+
+<div class="bg-gray-50 p-6 rounded-lg">
+<div class="text-sm text-primary mb-2">2023 - 2024</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">ALX Professional Foundations</h3>
+<p class="text-gray-600">Completed an 8-week professional development program, enhancing expertise in 8 key meta skills: Self-Awareness, Teamwork and Management, Effective Communication, Quantitative Reasoning, Entrepreneurial Thinking, Critical Thinking, Time Management, and Tech Foundations. This comprehensive program equipped me with essential skills to excel in specialized fields, fostering a strong foundation for career growth and professional success.</p>
+</div>
+</div>
+
+<div class="space-y-6">
+<!-- Education Column 2 -->
+<div class="bg-gray-50 p-6 rounded-lg">
+<div class="text-sm text-primary mb-2">2022 - 2023</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Codesmith SWE Bootcamp</h3>
+<p class="text-gray-600">Joined software engineering bootcamp where I learnt more about programming languages like Javascript.</p>
+</div>
+
+<div class="bg-gray-50 p-6 rounded-lg">
+<div class="text-sm text-primary mb-2">2023 - 2024</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">ALX AI Career Essentials</h3>
+<p class="text-gray-600">ALX AICE focus on AI-powered tools and techniques, such as predictive analytics, generative adversarial networks, and deep learning, help software engineers build more efficient, reliable, and innovative software systems. ALX AICE empowers software engineers to build cutting-edge systems leveraging AI-powered tools and techniques, including: Predictive Analytics, Generative Adversarial Network (GAN) and Deep Learning.</p>
+</div>
+
+<div class="bg-gray-50 p-6 rounded-lg">
+<div class="text-sm text-primary mb-2">2023 - 2024</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">ALX Frontend Programme</h3>
+<p class="text-gray-600">ALX Frontend Engineering program focus on building intuitive and interactive digital interfaces, teaching developers bring websites and applications to life through modern technologies like HTML, CSS, JavaScript, and frameworks like React, Angular or Vue and best practices.</p>
+</div>
+
+<div class="bg-gray-50 p-6 rounded-lg">
+<div class="text-sm text-primary mb-2">2023 - 2024</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Industrial Trainee</h3>
+<p class="text-gray-600">As a veterinary medical student, I enrolled in a comprehensive 2-month industrial training program at Nyanya veterinary clinic (FCTA), leveraging technology to enhance animal healthcare. This hands-on experience combined clinical expertise with digital innovation, conducted post-mortem examinations on animal carcasses to identify disease/abnormalities, ensuring ethical compliance, performed meticulous examinations, documented findings, and maintained accurate records, adhering to regulatory standards.</p>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- Core Focus Areas -->
+<section id="focus" class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold text-center text-gray-900 mb-4">Core Focus Areas</h2>
+<p class="text-gray-600 text-center max-w-3xl mx-auto mb-12">
+My work spans multiple disciplines, bringing together technology and veterinary medicine to create innovative solutions for animal health and care.
+</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Software Development Card -->
+<div class="bg-white rounded-lg shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=Modern%2520web%2520development%2520workspace%2520with%2520clean%2520code%2520on%2520screen%2C%2520professional%2520setup%2520with%2520minimal%2520design%2C%2520blue%2520accents%2C%2520showing%2520responsive%2520website%2520design%2520elements%2C%2520high-quality%2520professional%2520environment&width=800&height=400&seq=focus1&orientation=landscape');"></div>
+<div class="p-6">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+<span class="w-6 h-6 flex items-center justify-center text-primary"><i class="ri-code-s-slash-line"></i></span>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Software Development</h3>
+<ul class="space-y-2 text-gray-600">
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-primary mt-0.5 mr-2"><i class="ri-check-line"></i></span>
+<span>Responsive web applications</span>
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-primary mt-0.5 mr-2"><i class="ri-check-line"></i></span>
+<span>User-centric interface design</span>
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-primary mt-0.5 mr-2"><i class="ri-check-line"></i></span>
+<span>Frontend frameworks (React, Vue)</span>
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-primary mt-0.5 mr-2"><i class="ri-check-line"></i></span>
+<span>Performance optimization</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Machine Learning Card -->
+<div class="bg-white rounded-lg shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=Machine%2520learning%2520visualization%2520with%2520data%2520patterns%2C%2520neural%2520networks%2C%2520and%2520predictive%2520models%2C%2520clean%2520professional%2520display%2520of%2520AI%2520concepts%2C%2520blue%2520and%2520white%2520color%2520scheme%2C%2520medical%2520data%2520visualization%2C%2520high-quality%2520professional%2520environment&width=800&height=400&seq=focus2&orientation=landscape');"></div>
+<div class="p-6">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+<span class="w-6 h-6 flex items-center justify-center text-primary"><i class="ri-brain-line"></i></span>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Machine Learning</h3>
+<ul class="space-y-2 text-gray-600">
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-primary mt-0.5 mr-2"><i class="ri-check-line"></i></span>
+<span>Disease prediction models</span>
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-primary mt-0.5 mr-2"><i class="ri-check-line"></i></span>
+<span>Medical image analysis</span>
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-primary mt-0.5 mr-2"><i class="ri-check-line"></i></span>
+<span>Data engineering pipelines</span>
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-primary mt-0.5 mr-2"><i class="ri-check-line"></i></span>
+<span>Predictive analytics</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Veterinary Innovation Card -->
+<div class="bg-white rounded-lg shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=Modern%2520veterinary%2520technology%2520with%2520digital%2520diagnostic%2520tools%2C%2520clean%2520medical%2520environment%2520with%2520advanced%2520equipment%2C%2520professional%2520veterinary%2520care%2520setting%2C%2520blue%2520medical%2520technology%2520theme%2C%2520no%2520people%2C%2520high-quality%2520professional%2520environment&width=800&height=400&seq=focus3&orientation=landscape');"></div>
+<div class="p-6">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+<span class="w-6 h-6 flex items-center justify-center text-primary"><i class="ri-heart-pulse-line"></i></span>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Veterinary Innovation</h3>
+<ul class="space-y-2 text-gray-600">
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-primary mt-0.5 mr-2"><i class="ri-check-line"></i></span>
+<span>Digital diagnostic tools</span>
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-primary mt-0.5 mr-2"><i class="ri-check-line"></i></span>
+<span>Remote monitoring systems</span>
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-primary mt-0.5 mr-2"><i class="ri-check-line"></i></span>
+<span>Healthcare data analytics</span>
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-primary mt-0.5 mr-2"><i class="ri-check-line"></i></span>
+<span>Smart animal care solutions</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Skills Grid -->
+<section id="skills" class="py-20 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Technical Skills</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Development Skills -->
+<div>
+<h3 class="text-xl font-semibold text-gray-900 mb-6 flex items-center">
+<span class="w-8 h-8 flex items-center justify-center text-primary mr-2"><i class="ri-code-box-line"></i></span>
+Development
+</h3>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700">HTML/CSS</span>
+<span class="text-primary font-medium">95%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-progress" style="width: 95%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700">JavaScript</span>
+<span class="text-primary font-medium">90%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-progress" style="width: 90%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700">React</span>
+<span class="text-primary font-medium">85%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-progress" style="width: 85%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700">Python</span>
+<span class="text-primary font-medium">80%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-progress" style="width: 80%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700">Responsive Design</span>
+<span class="text-primary font-medium">90%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-progress" style="width: 90%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- ML/AI Skills -->
+<div>
+<h3 class="text-xl font-semibold text-gray-900 mb-6 flex items-center">
+<span class="w-8 h-8 flex items-center justify-center text-primary mr-2"><i class="ri-ai-generate"></i></span>
+Machine Learning & AI
+</h3>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700">Data Analysis</span>
+<span class="text-primary font-medium">85%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-progress" style="width: 85%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700">TensorFlow/PyTorch</span>
+<span class="text-primary font-medium">75%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-progress" style="width: 75%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700">Computer Vision</span>
+<span class="text-primary font-medium">70%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-progress" style="width: 70%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700">Natural Language Processing</span>
+<span class="text-primary font-medium">65%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-progress" style="width: 65%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700">Predictive Modeling</span>
+<span class="text-primary font-medium">80%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-progress" style="width: 80%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Veterinary Tech Skills -->
+<div>
+<h3 class="text-xl font-semibold text-gray-900 mb-6 flex items-center">
+<span class="w-8 h-8 flex items-center justify-center text-primary mr-2"><i class="ri-microscope-line"></i></span>
+Veterinary Technology
+</h3>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700">Diagnostic Systems</span>
+<span class="text-primary font-medium">85%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-progress" style="width: 85%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700">Medical Imaging</span>
+<span class="text-primary font-medium">80%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-progress" style="width: 80%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700">Health Monitoring</span>
+<span class="text-primary font-medium">75%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-progress" style="width: 75%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Robotics & Automation -->
+<div>
+<h3 class="text-xl font-semibold text-gray-900 mb-6 flex items-center">
+<span class="w-8 h-8 flex items-center justify-center text-primary mr-2"><i class="ri-robot-line"></i></span>
+Robotics & Automation
+</h3>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700">Robotic Systems</span>
+<span class="text-primary font-medium">65%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-progress" style="width: 65%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700">IoT Integration</span>
+<span class="text-primary font-medium">70%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-progress" style="width: 70%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700">Automated Processes</span>
+<span class="text-primary font-medium">75%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-progress" style="width: 75%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Vision & Goals Section -->
+<section id="vision" class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row gap-10 items-center">
+<div class="md:w-1/2">
+<img src="https://readdy.ai/api/search-image?query=Futuristic%2520veterinary%2520care%2520with%2520advanced%2520technology%2C%2520robotics%2520assisting%2520in%2520animal%2520diagnostics%2C%2520clean%2520medical%2520environment%2520with%2520digital%2520interfaces%2C%2520blue%2520and%2520white%2520color%2520scheme%2C%2520professional%2520healthcare%2520setting%2C%2520no%2520people%2C%2520high-quality%2520professional%2520environment&width=800&height=600&seq=vision&orientation=landscape" alt="Vision for Veterinary Technology" class="rounded-lg shadow-md w-full h-auto object-cover">
+</div>
+<div class="md:w-1/2">
+<h2 class="text-3xl font-bold text-gray-900 mb-6">Vision & Goals</h2>
+<div class="space-y-6">
+<div class="bg-white p-5 rounded-lg shadow-sm">
+<h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center">
+<span class="w-8 h-8 flex items-center justify-center text-primary mr-2 bg-primary/10 rounded-full"><i class="ri-eye-line"></i></span>
+Long-term Vision
+</h3>
+<p class="text-gray-600">
+Transforming veterinary care through the integration of cutting-edge technology, making advanced diagnostics and treatment accessible to all animals regardless of location or resources.
+</p>
+</div>
+<div class="bg-white p-5 rounded-lg shadow-sm">
+<h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center">
+<span class="w-8 h-8 flex items-center justify-center text-primary mr-2 bg-primary/10 rounded-full"><i class="ri-focus-3-line"></i></span>
+Current Focus
+</h3>
+<p class="text-gray-600">
+Developing AI-powered diagnostic tools that can identify common animal diseases from images and symptoms, with a particular focus on regions with limited access to veterinary specialists.
+</p>
+</div>
+<div class="bg-white p-5 rounded-lg shadow-sm">
+<h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center">
+<span class="w-8 h-8 flex items-center justify-center text-primary mr-2 bg-primary/10 rounded-full"><i class="ri-team-line"></i></span>
+Collaboration Interests
+</h3>
+<p class="text-gray-600">
+Seeking partnerships with veterinary clinics, animal welfare organizations, and technology companies to create impactful solutions that address real-world challenges in animal healthcare.
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="py-20 bg-primary">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h2 class="text-3xl font-bold text-white mb-6">Let's Build the Future of Animal Health Together</h2>
+<p class="text-white/90 text-lg mb-8 max-w-3xl mx-auto">
+I'm always open to meaningful collaboration, especially on projects that combine data, software, and healthcare to create impactful solutions for animal welfare.
+</p>
+<a href="#contact" class="inline-block bg-white text-primary px-8 py-4 rounded-button font-medium hover:bg-gray-100 transition duration-300 whitespace-nowrap">Get in Touch</a>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Contact & Connect</h2>
+<div class="flex flex-col md:flex-row gap-10">
+<div class="md:w-1/2">
+<form id="contactForm" class="space-y-6">
+<div>
+<label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+<input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary/20 transition duration-300" placeholder="Your name">
+</div>
+<div>
+<label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+<input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary/20 transition duration-300" placeholder="Your email address">
+</div>
+<div>
+<label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+<input type="text" id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary/20 transition duration-300" placeholder="What is this regarding?">
+</div>
+<div>
+<label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+<textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary/20 transition duration-300" placeholder="Your message"></textarea>
+</div>
+<button type="submit" class="w-full bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 transition duration-300 whitespace-nowrap">Send Message</button>
+</form>
+</div>
+<div class="md:w-1/2 bg-gray-50 rounded-lg p-8">
+<h3 class="text-xl font-semibold text-gray-900 mb-6">Connect With Me</h3>
+<div class="space-y-6">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary mr-4">
+<i class="ri-mail-line"></i>
+</div>
+<div>
+<h4 class="text-gray-900 font-medium">Email</h4>
+<a href="mailto:ibrahimadebanjo283@gmail.com" class="text-primary hover:underline">ibrahimadebanjo283@gmail.com</a>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary mr-4">
+<i class="ri-github-fill"></i>
+</div>
+<div>
+<h4 class="text-gray-900 font-medium">GitHub</h4>
+<a href="https://github.com/Ibrahimadebanjo" target="_blank" class="text-primary hover:underline">github.com/Ibrahimadebanjo</a>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary mr-4">
+<i class="ri-linkedin-box-fill"></i>
+</div>
+<div>
+<h4 class="text-gray-900 font-medium">LinkedIn</h4>
+<a href="https://linkedin.com/in/ibrahim-adebanjo" target="_blank" class="text-primary hover:underline">linkedin.com/in/ibrahim-adebanjo</a>
+</div>
+</div>
+<div class="pt-6">
+<h4 class="text-gray-900 font-medium mb-4">Collaboration Interests</h4>
+<div class="flex flex-wrap gap-2">
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Veterinary Tech</span>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">AI for Animal Health</span>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Medical Imaging</span>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Diagnostic Tools</span>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Robotics</span>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Web Development</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<div class="mb-6 md:mb-0">
+<span class="text-2xl font-['Pacifico'] text-white">Ibrahim Adebanjo</span>
+<p class="mt-2 text-gray-400">Veterinary Medicine Student | Software Developer | ML Engineer</p>
+</div>
+<div class="flex space-x-6">
+<a href="mailto:ibrahimadebanjo283@gmail.com" class="text-gray-400 hover:text-white transition duration-300">
+<span class="w-6 h-6 flex items-center justify-center"><i class="ri-mail-line"></i></span>
+</a>
+<a href="https://github.com/Ibrahimadebanjo" target="_blank" class="text-gray-400 hover:text-white transition duration-300">
+<span class="w-6 h-6 flex items-center justify-center"><i class="ri-github-line"></i></span>
+</a>
+<a href="https://linkedin.com/in/ibrahim-adebanjo" target="_blank" class="text-gray-400 hover:text-white transition duration-300">
+<span class="w-6 h-6 flex items-center justify-center"><i class="ri-linkedin-line"></i></span>
+</a>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400">© 2025 Ibrahim Adebanjo. All rights reserved.</p>
+<p class="text-gray-400 mt-4 md:mt-0">Building the future of animal health through technology</p>
+</div>
+</div>
+</footer>
+<!-- Scripts -->
+<script id="mobileMenuScript">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuButton = document.getElementById('mobileMenuButton');
+const mobileMenu = document.getElementById('mobileMenu');
+mobileMenuButton.addEventListener('click', function() {
+mobileMenu.classList.toggle('hidden');
+});
+// Close mobile menu when clicking on a link
+const mobileLinks = mobileMenu.querySelectorAll('a');
+mobileLinks.forEach(link => {
+link.addEventListener('click', function() {
+mobileMenu.classList.add('hidden');
+});
+});
+});
+</script>
+<script id="typingEffectScript">
+document.addEventListener('DOMContentLoaded', function() {
+const typingText = document.getElementById('typingText');
+const texts = [
+"Veterinary Medicine Student",
+"Frontend Developer",
+"ML Engineer",
+"Robotics & Automation Enthusiast"
+];
+let textIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typingSpeed = 100;
+function type() {
+const currentText = texts[textIndex];
+if (isDeleting) {
+typingText.textContent = currentText.substring(0, charIndex - 1);
+charIndex--;
+typingSpeed = 50;
+} else {
+typingText.textContent = currentText.substring(0, charIndex + 1);
+charIndex++;
+typingSpeed = 100;
+}
+if (!isDeleting && charIndex === currentText.length) {
+isDeleting = true;
+typingSpeed = 1500; // Pause at end of word
+} else if (isDeleting && charIndex === 0) {
+isDeleting = false;
+textIndex = (textIndex + 1) % texts.length;
+typingSpeed = 500; // Pause before starting new word
+}
+setTimeout(type, typingSpeed);
+}
+setTimeout(type, 1000);
+});
+</script>
+<script id="contactFormScript">
+document.addEventListener('DOMContentLoaded', function() {
+const contactForm = document.getElementById('contactForm');
+contactForm.addEventListener('submit', function(e) {
+e.preventDefault();
+// Get form values
+const name = document.getElementById('name').value;
+const email = document.getElementById('email').value;
+const subject = document.getElementById('subject').value;
+const message = document.getElementById('message').value;
+// Basic validation
+if (!name || !email || !message) {
+alert('Please fill in all required fields.');
+return;
+}
+// Email validation
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (!emailRegex.test(email)) {
+alert('Please enter a valid email address.');
+return;
+}
+// In a real application, you would send this data to a server
+alert('Thank you for your message! I will get back to you soon.');
+contactForm.reset();
+});
+});
+</script>
+<script id="smoothScrollScript">
+document.addEventListener('DOMContentLoaded', function() {
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+if (targetId === '#') return;
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+window.scrollTo({
+top: targetElement.offsetTop - 80, // Adjust for fixed header
+behavior: 'smooth'
+});
+}
+});
+});
+});
+</script>
+</body>
+</html>
